@@ -1,0 +1,32 @@
+{
+  "name": "react-dadjoke",
+  "version": "0.0.1",
+  "description": "React component to display random dad joke",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Opentrace/react-dadjoke.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Opentrace/react-dadjoke/issues"
+  },
+  "homepage": "https://github.com/Opentrace/react-dadjoke",
+  "scripts": {
+    "postinstall": "builder run npm:postinstall",
+    "preversion": "builder run npm:preversion",
+    "version": "builder run npm:version",
+    "test": "builder run npm:test"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "builder": "^2.5.0",
+    "builder-react-component": "^0.3.5"
+  },
+  "devDependencies": {
+    "builder-react-component-dev": "^0.3.5",
+    "react": "^0.14.0",
+    "react-addons-test-utils": "^0.14.0",
+    "react-dom": "^0.14.0"
+  }
+}
