@@ -1,7 +1,8 @@
 import React from "react";
-import axios from 'axios';
+import PropTypes from "prop-types";
+import axios from "axios";
 
-const BASE_API_URL = 'https://icanhazdadjoke.com';
+const BASE_API_URL = "https://icanhazdadjoke.com";
 
 export default class DadJoke extends React.Component {
   constructor(props) {
@@ -24,9 +25,9 @@ export default class DadJoke extends React.Component {
     }
     axios.get(url, {
       headers: {
-        'Accept': 'application/json'
-      },
-    }).then(res => {
+        "Accept": "application/json"
+      }
+    }).then((res) => {
       this.setState({ joke: { id: res.data.id, text: res.data.joke }});
     });
   }
@@ -35,7 +36,7 @@ export default class DadJoke extends React.Component {
     const { className, img, refreshButton, refreshButtonClassName } = this.props;
     const { joke } = this.state;
     if (!joke) {
-      <div className={ className } />
+      <div className={ className } />;
     }
     return (
       img ?
@@ -51,10 +52,18 @@ export default class DadJoke extends React.Component {
   }
 }
 
+DadJoke.propTypes = {
+  className: PropTypes.string,
+  jokeID: PropTypes.string,
+  img: PropTypes.bool,
+  refreshButton: PropTypes.bool,
+  refreshButtonClassName: PropTypes.string
+};
+
 DadJoke.defaultProps = {
-  className: 'dad-joke',
+  className: "dad-joke",
   jokeID: null,
   img: false,
   refreshButton: false,
-  refreshButtonClassName: 'dad-joke__refresh-button'
+  refreshButtonClassName: "dad-joke__refresh-button"
 };

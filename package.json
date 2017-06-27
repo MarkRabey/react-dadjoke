@@ -16,12 +16,13 @@
     "postinstall": "builder run npm:postinstall",
     "preversion": "builder run npm:preversion",
     "version": "builder run npm:version",
-    "test": "builder run npm:test"
+    "test": ""
   },
   "dependencies": {
     "axios": "^0.16.2",
     "builder": "^2.5.0",
-    "builder-react-component": "^0.3.5"
+    "builder-react-component": "^0.3.5",
+    "prop-types": "^15.5.10"
   },
   "devDependencies": {
     "builder-react-component-dev": "^0.3.5",

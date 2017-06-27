@@ -11,14 +11,16 @@ class App extends React.Component {
           <h2 className="demo__heading">Random Dad Joke <small>(as text)</small></h2>
           <DadJoke />
         </div>
-        
+
         <div className="random-as-image">
           <h2 className="demo__heading">Random Dad Joke <small>(as image)</small></h2>
           <DadJoke img />
         </div>
 
         <div className="random-with-refresh">
-          <h2 className="demo__heading">Random Dad Joke <small>(with refresh button)</small></h2>
+          <h2 className="demo__heading">
+            Random Dad Joke <small>(with refresh button)</small>
+          </h2>
           <DadJoke refreshButton />
         </div>
       </div>
