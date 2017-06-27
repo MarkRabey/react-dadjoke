@@ -35,11 +35,11 @@ export default class DadJoke extends React.Component {
     const { className, img, refreshButton, refreshButtonClassName } = this.props;
     const { joke } = this.state;
     if (!joke) {
-      return null;
+      <div className={ className } />
     }
     return (
       img ?
-      <img src={ `${ BASE_API_URL }/j/${ joke.id }.png` } /> :
+      <img className={ className } src={ `${ BASE_API_URL }/j/${ joke.id }.png` } /> :
       <div className={ className }>
         { joke.text }
         {

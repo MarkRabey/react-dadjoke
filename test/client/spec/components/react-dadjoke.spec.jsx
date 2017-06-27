@@ -19,7 +19,7 @@ describe("components/react-dadjoke", () => {
     // This is a real DOM node to assert on.
     const divNode = TestUtils
       .findRenderedDOMComponentWithTag(rendered, "div");
-
+      
     expect(divNode).to.have.property("innerHTML", "Edit me!");
   });
 
