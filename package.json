@@ -9,7 +9,7 @@
     "docs:build": "webpack --devtool inline-source-map",
     "docs:deploy": "npm run docs:build && git add demo/dist && git commit -m \"rebuild docs\" && git subtree push --prefix demo/dist origin gh-pages",
     "start": "webpack-dev-server --devtool inline-source-map --progress --colors --inline --hot --content-base demo",
-    "test": "karma start karma.conf.js"
+    "test": ""
   },
   "repository": {
     "type": "git",
