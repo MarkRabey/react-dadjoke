@@ -1,3 +1,5 @@
+[![Travis Status][trav_img]][trav_site] [![npm version](https://badge.fury.io/js/react-dadjoke.svg)](https://badge.fury.io/js/react-dadjoke)
+
 # react-dadjoke
 React component for displaying random dad jokes
 
