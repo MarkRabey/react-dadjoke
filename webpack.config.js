@@ -2,13 +2,13 @@ const webpack = require('webpack');
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './demo/index.jsx',
   output: {
     path: path.join(__dirname, './demo/dist'),
-    filename: 'index.js',
-    publicPath: '/dist/',
+    filename: 'index.js'
   },
   module: {
     loaders: [
@@ -46,6 +46,9 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin({ filename: 'main.css', allChunks: true }),
+    new CopyWebpackPlugin([
+      {from: 'demo/index.html'},
+    ]),
   ],
   resolve: {
     extensions: ['.js', '.json', '.jsx'],
