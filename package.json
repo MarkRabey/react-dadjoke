@@ -6,7 +6,7 @@
   "scripts": {
     "dist": "webpack --config webpack.dist.config.js",
     "standalone": "webpack --config webpack.standalone.config.js",
-    "examples": "webpack --devtool inline-source-map",
+    "docs:build": "webpack --devtool inline-source-map",
     "start": "webpack-dev-server --devtool inline-source-map --progress --colors --inline --hot --content-base demo",
     "test": "karma start karma.conf.js"
   },
