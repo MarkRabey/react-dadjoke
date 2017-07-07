@@ -1,6 +1,9 @@
 /* eslint-disable */
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Highlight from 'react-highlight';
+import 'highlight.js/styles/atom-one-dark.css';
+
 import DadJoke from 'DadJoke';
 import {
   Jumbotron,
@@ -13,6 +16,19 @@ import './main.scss';
 class Demo extends React.Component {
   render() {
     const docs = '//github.com/Opentrace/react-dadjoke';
+    const usage = `import React from 'react';
+import DadJoke from 'react-dadjoke';
+export default class MyComponent extends React.Component {
+  ...
+  render() {
+    return (
+      <div>
+        ...
+        <DadJoke />
+      </div>
+    );
+  }
+}`
 
     return (
       <div className="demo">
@@ -26,11 +42,27 @@ class Demo extends React.Component {
         <div className="container">
           <div>
             <PageHeader>
-              Display as text
+              Basic Example
             </PageHeader>
             <Panel header={ <span><code>&lt;DadJoke /&gt;</code></span> }>
               <DadJoke />
             </Panel>
+          </div>
+
+          <div>
+            <PageHeader>
+              Installation
+            </PageHeader>
+            Install with npm: <code>npm install --save react-dadjoke</code>.
+          </div>
+
+          <div>
+            <PageHeader>
+              Usage
+            </PageHeader>
+            <Highlight className='javascript'>
+              { usage }
+            </Highlight>
           </div>
 
           <div>
@@ -73,11 +105,11 @@ class Demo extends React.Component {
               <li>
                 <code>jokeID</code><span className="text-muted">(string)</span> specify a joke to display
               </li>
-              
+
               <li>
                 <code>img</code><span className="text-muted">(boolean)</span> display an image instead of text
               </li>
-              
+
               <li>
                 <code>refreshButton</code><span className="text-muted">(boolean)</span> display a refresh button
               </li>
