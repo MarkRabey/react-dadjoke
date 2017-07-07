@@ -1,0 +1,20 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "globals": {
+    "__DEV__": true
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jasmine": true
+  },
+  "rules": {
+    "react/jsx-curly-spacing": [2, {"when": "always"}],
+    "template-curly-spacing": ["error", "always"],
+    "object-curly-spacing": ["error", "always", {
+      "arraysInObjects": false,
+      "objectsInObjects": false,
+    }],
+  }
+}
