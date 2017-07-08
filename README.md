@@ -9,7 +9,7 @@ npm install react-dadjoke --save
 ```
 
 ## Live Demo
-* <a href="//opentrace.gihub.io/react-dadjoke" target="_blank">Basic Example</a>
+* <a href="//opentrace.github.io/react-dadjoke" target="_blank">Basic Example</a>
 
 ## Usage
 Enter usage details here.
