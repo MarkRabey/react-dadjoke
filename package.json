@@ -1,6 +1,6 @@
 {
   "name": "react-dadjoke",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "React component for displaying random dad jokes",
   "main": "dist/index.js",
   "scripts": {
