@@ -49,6 +49,10 @@ module.exports = {
     new CopyWebpackPlugin([
       {from: 'demo/index.html'},
     ]),
+    new webpack.optimize.UglifyJsPlugin(),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production')
+    }),
   ],
   resolve: {
     extensions: ['.js', '.json', '.jsx'],
